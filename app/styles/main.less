@@ -1,0 +1,69 @@
+@import "../bower_components/bootstrap/less/bootstrap.less";
+@icon-font-path: "../fonts/glyphicons/";
+@import "../bower_components/font-awesome/less/font-awesome.less";
+@fa-font-path: "../fonts/font-awesome";
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+@media (max-width: 770px) {
+    #mainnav {
+        margin: 50px auto 0 auto;
+        position: fixed;
+        bottom: 10px;
+        width:100%;
+    }
+    #navigation-link {
+        width:100%;
+        font-size:24px;
+    }
+    #drawernav {
+        display:none;
+        margin: 0px auto;
+        position: fixed;
+        bottom: 58px;
+        width:100%;
+    }
+    #drawernav a.btn {
+        width:100%;
+        border-radius:0px;
+        border:1px solid #eee;
+        border-top:none;
+        font-size:20px;
+    }
+}
+
+@media (min-width: 770px) {
+    body.home {
+      background:none;
+    } 
+    
+    body.home #logo {
+      display: block;
+      width:580px;
+      margin:0px auto;
+    }
+    
+    body.home #footer {
+      
+    }
+
+    #drawernav {
+      display: none;
+    }
+
+    html {
+        background: url(../images/home-bkgd-1650x843.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    #mainnav {
+        display:none;
+    }
+}
