@@ -7300,6 +7300,9 @@ td.visible-print {
   color: #000;
   padding: 0.2em 0;
 }
+.center {
+  text-align: center;
+}
 @media (max-width: 770px) {
   #mainnav {
     margin: 50px auto 0 auto;
@@ -7318,12 +7321,14 @@ td.visible-print {
     bottom: 58px;
     width: 100%;
   }
-  #drawernav a.btn {
-    width: 100%;
+  #drawernav a {
+    display: block;
+    background-color: #eee;
     border-radius: 0px;
     border: 1px solid #eee;
     border-top: none;
     font-size: 20px;
+    padding: 5px;
   }
   body.home #logo {
     display: block;
@@ -7368,6 +7373,31 @@ td.visible-print {
   }
   #mainnav {
     display: none;
+  }
+  #main-nav-container {
+    width: 650px;
+    margin: 0px auto;
+    padding: 10px;
+    background-color: #fff;
+  }
+  #main-nav-container a {
+    display: block;
+    font-size: 14px;
+    width: 120px;
+    float: left;
+    text-align: center;
+  }
+  body.home #footer-below {
+    text-align: center;
+  }
+  body.home #footer-below span a {
+    color: #fff;
+  }
+  body.home #footer-below h1 {
+    color: #fff;
+    font-family: 'Georgia', 'Times New Roman';
+    font-weight: normal;
+    text-shadow: 1px 1px 1px #222;
   }
 }
 /*# sourceMappingURL=/styles/main.css.map */
