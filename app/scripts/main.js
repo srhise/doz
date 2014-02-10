@@ -1,7 +1,3 @@
-$(function() {
-    FastClick.attach(document.body);
-});
-
 $('#navigation-link').on('click', function() {
 	$('#drawernav').slideToggle(200, function(){
 		if ($(this).is(":hidden")) {
