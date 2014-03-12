@@ -7294,6 +7294,16 @@ td.visible-print {
 .fa-plus-square-o:before {
   content: "\f196";
 }
+html {
+  background: url(../images/home-bkgd-1650x843.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+body {
+  background: none;
+}
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -7307,28 +7317,39 @@ td.visible-print {
   #mainnav {
     margin: 50px auto 0 auto;
     position: fixed;
-    bottom: 10px;
+    bottom: 78px;
     width: 100%;
   }
   #navigation-link {
     width: 100%;
     font-size: 24px;
+    border-radius: 0px;
+    background-color: #fff;
+    border: none;
+    color: #155677;
   }
   #drawernav {
+    width: 100%;
+    padding: 0px;
+  }
+  #mainnavrow {
     display: none;
     margin: 0px auto;
     position: fixed;
-    bottom: 58px;
+    bottom: 124px;
     width: 100%;
   }
-  #drawernav a {
+  #main-nav-container {
+    background: rgba(21, 86, 119, 0.8);
+  }
+  #main-nav-container a {
     display: block;
-    background-color: #eee;
     border-radius: 0px;
-    border: 1px solid #eee;
     border-top: none;
     font-size: 20px;
     padding: 5px;
+    text-align: center;
+    color: #fff;
   }
   body.home #logo {
     display: block;
@@ -7339,6 +7360,30 @@ td.visible-print {
     display: block;
     width: 270px;
     margin: 0px auto;
+  }
+  body.home #footer-below {
+    position: fixed;
+    bottom: 0px;
+    text-align: center;
+    color: #fff;
+    padding: 0px 10px;
+    width: 100%;
+  }
+  body.home #footer-below span a {
+    color: #fff;
+    font-size: 18px;
+  }
+  body.home #footer-below h1 {
+    color: #fff;
+    font-family: "arno-pro", "Times New Roman", Times, serif;
+    font-weight: normal;
+    font-size: 26px;
+    margin: 0px;
+    text-shadow: 5px 2px 7px #221f1f;
+  }
+  #copyright {
+    display: block;
+    font-size: 10px;
   }
 }
 @media (min-width: 770px) {
@@ -7363,13 +7408,6 @@ td.visible-print {
   }
   #drawernav {
     display: none;
-  }
-  html {
-    background: url(../images/home-bkgd-1650x843.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
   }
   #mainnav {
     display: none;
@@ -7406,14 +7444,13 @@ td.visible-print {
     text-shadow: 5px 2px 7px #221f1f;
   }
 }
-@media (max-width: 1400px) {
+@media (min-width: 1000px) {
   body.home #footer {
     bottom: 10px;
   }
   body.home #drawernav {
     display: block;
     margin: 0px auto;
-    position: relative;
     bottom: 10px;
   }
   #copyright {
@@ -7428,12 +7465,17 @@ td.visible-print {
   body.home #drawernav {
     display: block;
     margin: 0px auto;
-    position: relative;
     bottom: 25px;
   }
   #copyright {
     display: block;
     margin-top: 15px;
   }
+}
+/* Global Styles */
+.tooltip-inner {
+  font-family: "arno-pro", "Times New Roman", Times, serif;
+  font-size: 16px;
+  font-style: italic;
 }
 /*# sourceMappingURL=/styles/main.css.map */

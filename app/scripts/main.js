@@ -1,5 +1,6 @@
 $('#navigation-link').on('click', function() {
-	$('#drawernav').slideToggle(200, function(){
+	console.log('clicked');
+	$('#mainnavrow').slideToggle(200, function(){
 		if ($(this).is(":hidden")) {
 			$('#navigation-link i').removeClass('fa-minus-circle');
 			$('#navigation-link i').addClass('fa-plus-circle');
@@ -9,3 +10,11 @@ $('#navigation-link').on('click', function() {
 		}
 	});
 });
+
+$('#main-nav-container a').tooltip({
+	"html" : false
+});
+
+if (!Modernizr.svg) {
+  $("#logo img").attr("src", "images/logo-530x235.png");
+}
