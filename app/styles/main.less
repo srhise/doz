@@ -4,13 +4,30 @@
 @import "../bower_components/font-awesome/less/font-awesome.less";
 @fa-font-path: "../fonts/font-awesome";
 
-html {
-        background: url(../images/home-bkgd-1650x843.jpg) no-repeat center center fixed;
+/*Colors */
+
+.gold {
+    color: @gold;
+}
+
+
+html.home {
+        background: url(../images/home-bkgd-1650x843-HighRes.jpg) no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
 }
+
+html.page {
+        background: url(../images/interior-bkgd-blur-2.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
+
+
 
 body {
     background:none;
@@ -28,13 +45,15 @@ body {
 }
 
 @media (max-width: 770px) {
-    #mainnav {
+    
+    body.home #mainnav {
         margin: 50px auto 0 auto;
         position: fixed;
         bottom: 78px;
         width:100%;
     }
-    #navigation-link {
+    
+    body.home #navigation-link {
         width:100%;
         font-size:24px;
         border-radius:0px;
@@ -43,21 +62,21 @@ body {
         color:@blue;
     }
 
-    #drawernav {
+    body.home #drawernav {
         width:100%;
         padding:0px;
     }
-    #mainnavrow {
+    body.home #mainnavrow {
         display:none;
         margin: 0px auto;
         position: fixed;
         bottom: 124px;
         width:100%;
     }
-    #main-nav-container {
+    body.home #main-nav-container {
         background: rgba(21,86,119, .80);
     }
-    #main-nav-container a {
+    body.home #main-nav-container a {
         display:block;
         border-radius:0px;
         border-top:none;
@@ -98,7 +117,7 @@ body {
         margin:0px;
         text-shadow: 5px 2px 7px #221f1f;
     }
-    #copyright {
+    body.home #copyright {
         display: block;
         font-size:10px;
     }
@@ -128,14 +147,14 @@ body {
         bottom: 25px;
     }
 
-    #drawernav {
+    body.home #drawernav {
       display: none;
     }
 
-    #mainnav {
+    body.home #mainnav {
         display:none;
     }
-    #main-nav-container {
+    body.home #main-nav-container {
         width:530px;
         margin:0px auto;
         padding:10px;
@@ -178,7 +197,7 @@ body {
         margin: 0px auto;
         bottom: 10px;
     }
-    #copyright {
+    body.home #copyright {
         display: block;
         margin-top:5px;
     }
@@ -194,7 +213,7 @@ body {
         margin: 0px auto;
         bottom: 25px;
     }
-    #copyright {
+    body.home #copyright {
         display: block;
         margin-top:15px;
     }
@@ -208,4 +227,51 @@ body {
     font-family:@font-family-serif;
     font-size:16px;
     font-style: italic;
+}
+
+
+/* Page Styles */
+
+@media (min-width: 770px) {
+
+    div#top-nav {        
+        a {
+            line-height: 37px;
+            margin-right:10px;
+            color:@white;
+        }
+    }
+
+    div#header {
+        background-color:#fff;
+        > div > div > ul > li > a {
+            line-height: 88px;
+        }
+    }
+
+    div#page-navigation > ul > li > a {
+        height: 40px;
+        margin: 35px 20px 10px 10px;
+        padding: 0px;
+        font-size: 16px;
+        font-weight: 700;  
+    }
+
+    div#page-navigation > ul > li > a:hover {
+        color:#000;
+        background-color:@white;
+    }
+
+    div#page-navigation div.popover {
+        width:475px;
+        max-width:475px;
+        height:255px;
+        background-color:#275574;
+        opacity: 0.7;
+        border:none;
+        border-radius:0;
+    }
+    div#page-navigation div.popover.fade.in {
+        opacity: 0.9;
+    }
 }
