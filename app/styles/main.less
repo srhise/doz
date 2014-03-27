@@ -263,9 +263,9 @@ body {
     }
 
     div#page-navigation div.popover {
-        width:475px;
-        max-width:475px;
-        height:255px;
+        width:500px;
+        max-width:500px;
+        min-height:255px;
         background-color:#275574;
         opacity: 0.7;
         border:none;
@@ -274,4 +274,64 @@ body {
     div#page-navigation div.popover.fade.in {
         opacity: 0.9;
     }
+
+    .popover-content h2 {
+        margin:5px 5px 0px 0px;
+    }
+    .popover-content em {
+        color:@white;
+        font-size:16px;
+        font-family:@font-family-serif;
+    }
+    .popover-content-left {
+        width:195px;
+        border-right:2px solid @darkBlue;
+        min-height:230px;
+        float:left;
+    }
+
+    .popover-content-right {
+        float:left;
+        width:275px;
+        color:@white;
+    }
+    .popover-content-right > ul {
+        color:@white;
+        margin:0px 0px 0px 10px;
+        padding:0;
+        list-style-type:none;
+        > li {
+            list-style-type:none;
+            > ul {
+                margin:0px 0px 0px 0px;
+                padding:0;
+                list-style-type:none;
+                > li {
+                    
+                    display: block;
+                    > a {
+                        display: block;
+                        color:@white;
+                        padding-left:10px;
+                    }
+                    > a:hover {
+                        background-color:@darkBlue;
+                        text-decoration: none;
+                    }
+                }
+            }
+            > a {
+                padding-left:5px;
+                font-size:16px;
+                display: block;
+                color:@gold;
+            }
+            > a:hover {
+                background-color:@darkBlue;
+                text-decoration: none;
+            }
+        }
+    }
+  
+
 }
