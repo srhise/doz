@@ -47,6 +47,8 @@ $(document).ready(function() {
         $('.careers-popover').popover('hide');
         $('.community-popover').popover('hide');
         $(this).popover('show');
+        $(this).next().css('left', '-228px');
+        $(this).next().children('.arrow').css('left', '52%');
     });
 
     $('.careers-popover').popover({
