@@ -62,6 +62,8 @@ $(document).ready(function() {
         $('.services-popover').popover('hide');
         $('.community-popover').popover('hide');
         $(this).popover('show');
+        $(this).next().css('left', '-308px');
+        $(this).next().children('.arrow').css('left', '69%');
     });
 
     $('.community-popover').popover({
@@ -72,12 +74,15 @@ $(document).ready(function() {
         trigger: 'manual',
         animation: false
     }).mouseenter(function(e) {
+
         $('.about-popover').popover('hide');
         $('.insights-popover').popover('hide');
         $('.services-popover').popover('hide');
         $('.careers-popover').popover('hide');
         $(this).popover('show');
-       
+        $(this).next().css('left', '-386px');
+        $(this).next().children('.arrow').css('left', '86%');
+
     });
 
     $('#navigation-link').on('click', function() {
