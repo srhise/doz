@@ -13,6 +13,9 @@ $(document).ready(function() {
         animation: false
     }).mouseenter(function(e) {
         $('.about-popover').popover('hide');
+        $('.insights-popover').popover('hide');
+        $('.careers-popover').popover('hide');
+        $('.community-popover').popover('hide');
         $(this).popover('show');
     });
 
@@ -25,7 +28,56 @@ $(document).ready(function() {
         animation: false
     }).mouseenter(function(e) {
         $('.services-popover').popover('hide');
+        $('.insights-popover').popover('hide');
+        $('.careers-popover').popover('hide');
+        $('.community-popover').popover('hide');
         $(this).popover('show');
+    });
+
+    $('.insights-popover').popover({
+        html: true,
+        content: function() {
+            return $('#insights_dropdown_content').html();
+        },
+        trigger: 'manual',
+        animation: false
+    }).mouseenter(function(e) {
+        $('.about-popover').popover('hide');
+        $('.services-popover').popover('hide');
+        $('.careers-popover').popover('hide');
+        $('.community-popover').popover('hide');
+        $(this).popover('show');
+    });
+
+    $('.careers-popover').popover({
+        html: true,
+        content: function() {
+            return $('#careers_dropdown_content').html();
+        },
+        trigger: 'manual',
+        animation: false
+    }).mouseenter(function(e) {
+        $('.about-popover').popover('hide');
+        $('.insights-popover').popover('hide');
+        $('.services-popover').popover('hide');
+        $('.community-popover').popover('hide');
+        $(this).popover('show');
+    });
+
+    $('.community-popover').popover({
+        html: true,
+        content: function() {
+            return $('#community_dropdown_content').html();
+        },
+        trigger: 'manual',
+        animation: false
+    }).mouseenter(function(e) {
+        $('.about-popover').popover('hide');
+        $('.insights-popover').popover('hide');
+        $('.services-popover').popover('hide');
+        $('.careers-popover').popover('hide');
+        $(this).popover('show');
+       
     });
 
     $('#navigation-link').on('click', function() {
@@ -50,7 +102,6 @@ $(document).ready(function() {
         if (className.indexOf('popover') == -1) {
             $('*').popover('hide');
         }
-        
     });
 
 });
