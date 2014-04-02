@@ -4,6 +4,14 @@
 @import "../bower_components/font-awesome/less/font-awesome.less";
 @fa-font-path: "../fonts/font-awesome";
 
+// Custom Mixins
+
+.box-shadow(@shadow: 0 1px 3px rgba(0,0,0,.25)) {
+  -webkit-box-shadow: @shadow;
+  -moz-box-shadow: @shadow;
+  box-shadow: @shadow;
+}
+
 /*Colors */
 
 .gold {
@@ -26,8 +34,6 @@ html.page {
         background-size: cover;
 }
 
-
-
 body {
     background:none;
 }
@@ -43,8 +49,66 @@ body {
     text-align: center;
 }
 
-@media (max-width: 770px) {
-    
+body.page #logo {
+    padding: 12px 5px 10px 5px;
+}
+body.page #logo img {
+        width:200px;
+}
+
+@media (min-width: 300px) and (max-width:720px) {
+
+    .shifter-active .shifter-navigation {
+        display: none;
+    }
+
+    .shifter-active.shifter-open .shifter-navigation{
+        display: block;
+    }
+    .navbar-collapse {
+        padding:0px 0px;
+        border-top:none;
+    }
+
+    .shifter-handle {
+        margin:15px 20px 0px 0px;
+    }
+    #header {
+        background-color:#fff;
+    }
+
+    #top-nav {
+        display: none;
+    }
+
+    body.page #logo {
+        padding: 10px 5px; 
+        img {
+            width:150px;
+        }
+    }
+    .shifter-active nav.shifter-navigation {
+        background-color:@blue;
+    }
+
+    .shifter-active ul {
+        list-style-type:none;
+        margin:0px;
+        padding:0px 0px 0px 0px;
+    }
+    .shifter-active ul li a {
+        color:@white;
+        display: block;
+        border-top:1px solid @darkBlue;
+        padding:10px 0px;
+        text-align: center;
+    }
+    .shifter-active ul li a:hover {
+        color:@white;
+        background-color: @darkBlue;
+        text-decoration: none;
+    }
+
     body.home #mainnav {
         margin: 50px auto 0 auto;
         position: fixed;
@@ -122,15 +186,20 @@ body {
     }
 }
 
-@media (min-width: 770px) {
+@media (min-width: 720px) {
+
+    .navbar-brand {
+        padding:0px 15px 0px 0px;
+    }
+
     body.home {
       background:none;
     } 
     
     body.home #logo {
       display: block;
-      width:530px;
-      margin:0px auto;
+      width:470px;
+      margin:20px auto;
     }
     
     body.home #footer {
@@ -184,54 +253,6 @@ body {
         text-shadow: 5px 2px 7px #221f1f;
     }
 
-}
-
-@media (min-width: 1000px) {
-    body.home #footer {
-        bottom:10px;
-    }
-
-    body.home #drawernav {
-        display:block;
-        margin: 0px auto;
-        bottom: 10px;
-    }
-    body.home #copyright {
-        display: block;
-        margin-top:5px;
-    }
-}
-
-@media (min-width: 1400px) {
-    body.home #footer {
-        bottom:50px;
-    }
-
-    body.home #drawernav {
-        display:block;
-        margin: 0px auto;
-        bottom: 25px;
-    }
-    body.home #copyright {
-        display: block;
-        margin-top:15px;
-    }
-}
-
-/* Global Styles */
-.tooltip {
-
-}
-.tooltip-inner {
-    font-family:@font-family-serif;
-    font-size:16px;
-    font-style: italic;
-}
-
-
-/* Page Styles */
-
-@media (min-width: 770px) {
 
     div#top-nav {        
         a {
@@ -243,6 +264,9 @@ body {
 
     div#header {
         background-color:#fff;
+        -moz-box-shadow:    0 1px 10px rgba(0,0,0,.25);
+        -webkit-box-shadow: 0 1px 10px rgba(0,0,0,.25);
+        box-shadow:         0 1px 10px rgba(0,0,0,.25);
         > div > div > ul > li > a {
             line-height: 88px;
         }
@@ -254,6 +278,7 @@ body {
         padding: 0px;
         font-size: 16px;
         font-weight: 700;  
+        color:@blue;
     }
 
     div#page-navigation > ul > li > a:hover {
@@ -307,7 +332,6 @@ body {
                 padding:0;
                 list-style-type:none;
                 > li {
-                    
                     display: block;
                     > a {
                         display: block;
@@ -331,7 +355,112 @@ body {
                 text-decoration: none;
             }
         }
+        > li.nosub a {
+            color:@white;
+        }
     }
-  
+}
 
+@media (min-width: 1000px) {
+    body.home #footer {
+        bottom:10px;
+    }
+
+    body.home #drawernav {
+        display:block;
+        margin: 0px auto;
+        bottom: 10px;
+    }
+    body.home #copyright {
+        display: block;
+        margin-top:5px;
+    }
+}
+
+@media (min-width: 1400px) {
+    body.home #footer {
+        bottom:50px;
+    }
+
+    body.home #drawernav {
+        display:block;
+        margin: 0px auto;
+        bottom: 25px;
+    }
+    body.home #copyright {
+        display: block;
+        margin-top:15px;
+    }
+}
+
+/* Global Styles */
+#content {
+    -moz-box-shadow:    0 1px 10px rgba(0,0,0,.25);
+    -webkit-box-shadow: 0 1px 10px rgba(0,0,0,.25);
+    box-shadow:         0 1px 10px rgba(0,0,0,.25);
+    margin-top:15px;
+    background-color:@white;
+    border-top:3px solid @gold;
+
+    p, span, ul li, ol li {
+    color: #5d6e78;
+    }
+
+    .page-title {
+    font-weight:700;
+    color:@blue;
+    margin-bottom:0px;
+    }
+
+    .page-subhead {
+        font-family:@font-family-serif;
+        color:@blue;
+        font-size:24px;
+        font-style:italic;
+    }
+
+    .widget {
+
+        h3.widget-title {
+            font-size:14px;
+            text-decoration: underline;
+            margin-bottom:5px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin:0;
+            padding:0;
+            li {
+                list-style-type: none;
+                a:hover {
+                    text-decoration: none;
+                    background-color:@gray-lighter;
+                    display: block;
+                }
+            }
+            li.active a{
+                color:@gold;
+            }
+        }
+    }
+
+    table {
+        border:1px solid @gray-lighter;
+        thead {
+            background-color:@blue;
+            color:@white;
+        }
+    }
+}
+
+
+
+.tooltip {
+
+}
+.tooltip-inner {
+    font-family:@font-family-serif;
+    font-size:16px;
+    font-style: italic;
 }

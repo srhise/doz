@@ -111,4 +111,9 @@ $(document).ready(function() {
         }
     });
 
+    $.shifter({
+        maxWidth: '720px'
+    });
+
+
 });
