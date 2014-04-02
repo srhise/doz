@@ -111,7 +111,7 @@
                                     </div>
                                     <div class='popover-content-right'>
                                         <ul class="">
-                                            <li class="nosub"><a href="#">DOZ Blog</a>
+                                            <li class="nosub"><a href"=#">DOZ Blog</a>
                                             </li>
                                             <li class="nosub"><a href="#">Calendar of Events</a>
                                             </li>
@@ -164,29 +164,28 @@
             <!-- START SECTION -->
             <div id="content" class="container">
                 <div class="row">
-                    <div class="col-md-3">
-                        <div class="widget">
-                            <h3 class="widget-title">Section Title</h3>
-                            
-                            <ul class="">
+                    <div id="sidebar" class="col-md-3">
+                        <div class="widget" id="sectionNavigation">
+                            <h3 class="widget-title">Section Title <i class="fa fa-plus-circle"></i></h3>
+                            <ul id="sectionSubNav">
+                                <div class="arrow"><i class="fa fa-sort-desc"></i></div>
                                 <li><a href="#">Page in Section 1</a>
-                                    <ul class="">
-                                        <li class="active"><a href="#">Currently Active Page</a>
-                                        </li>
-                                        <li><a href="#">Page 2 in Section 1</a>
-                                        </li>
-                                        <li><a href="#">Page 3 in Section 1</a>
-                                        </li>
-                                        <li><a href="#">Page 4 in Section 1</a>
-                                        </li>
-                                        <li><a href="#">Page 5 in Section 1</a>
-                                        </li>
-                                    </ul>
+                                    <li class="active"><a href="#">Currently Active Page</a>
+                                    </li>
+                                    <li><a href="#">Page 2 in Section 1</a>
+                                    </li>
+                                    <li><a href="#">Page 3 in Section 1</a>
+                                    </li>
+                                    <li><a href="#">Page 4 in Section 1</a>
+                                    </li>
+                                    <li><a href="#">Page 5 in Section 1</a>
+                                    </li>
+                                    
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-9">
+                    <div class="col-md-9" id="mainContent">
                         <h1 class="page-title">Style Guide</h1>
                         <span class="page-subhead">Page SubHead</span>
                         <p class="lead">The style guide is a visual presentation of all of the possible types of content that will be displayed within pages on the website.</p>
