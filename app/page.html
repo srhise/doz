@@ -23,6 +23,7 @@
         <link rel="stylesheet" href="styles/main.css">
         <!--[if IE]>
         <link rel="stylesheet" href="styles/ie.css">
+        <script type="text/javascript" src="app/bower_components/respond/dest/respond.min.js"></script>
         <![endif]-->
         <!-- build:js scripts/vendor/modernizr.js -->
         <script src="bower_components/modernizr/modernizr.js"></script>
@@ -276,16 +277,19 @@
             <div class="container">
                 <div class="row" id="footer-top">
                     <div class="col-md-6">
-                        <a id="footer-logo" class="navbar-brand" href="index.html"><img src="images/logo-white.svg" alt="Dauby O'Connor &amp; Zaleski"/></a>
+                        <a id="footer-logo"  href="index.html"><img src="images/logo-white.svg" alt="Dauby O'Connor &amp; Zaleski"/></a>
                     </div>
                     <div class="col-md-6">
+                        <form>
                         <div class="input-group" id="footer-search">
-                            <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
-                            <div class="input-group-btn">
-                                <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
-                            </div>
+                            
+                                <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+                                </div>
                         </div>
-                        <ul id="footer-nav">
+                        </form>
+                        <ul id="footer-nav" class="hidden-xs">
                             <li><a href="#">About Us</a>
                             </li>
                             <li><a href="#">Services</a>
@@ -300,22 +304,22 @@
                     </div>
                 </div>
                 <div class="row" id="footer-bottom">
-                    <div class="col-md-2">
+                    <div class="col-md-2 col-xs-6">
                         <span>Headquarters</span>
                         <span>501 Congressional Blvd.</span>
                         <span>Carmel, IN 46033</span>
                     </div>
-                    <div class="col-md-2">
-                        <span>Headquarters</span>
-                        <span>501 Congressional Blvd.</span>
-                        <span>Carmel, IN 46033</span>
-                    </div>
-                    <div class="col-md-2">
-                        <span>Office: <a href="tel:5555555">848-5500</a></span>
+                    <div class="col-md-2 col-xs-6">
+                         <span>Office: <a href="tel:5555555">848-5500</a></span>
                         <span>Fax: <a href="tel:5555555">848-5500</a></span>
                         <span><a href="mailto: info@doz.net">info@doz.net</a></span>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-2 hidden-xs">
+                        <span><a href="#">Client Login</a></span>
+                        <span><a href="#">DOZ Brand</a></span>
+                        <span><a href="#">Confidentiality Note</a></span>
+                    </div>
+                    <div class="col-md-12">
                         <div id="social-footer">
                             <a href="#"><i class="fa fa-facebook-square social"></i></a>
                             <a href="#"><i class="fa fa-twitter-square social"></i></a>

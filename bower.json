@@ -6,7 +6,8 @@
     "font-awesome": "~4.0.0",
     "modernizr": "~2.6.2",
     "jquery": "~1.9.1",
-    "Shifter": "latest"
+    "Shifter": "latest",
+    "respond": "latest"
   },
   "devDependencies": {}
 }
