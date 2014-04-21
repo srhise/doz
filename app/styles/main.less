@@ -337,22 +337,6 @@ body.page #logo img {
         width:100%;
     }
 
-    #social-footer {
-        float:right;
-    }
-
-    #social-footer i{
-        color:@white;
-        font-size:25px;
-    }
-
-    #copyright-footer {
-        clear: both;
-        float:right;
-    }
-    #copyright-footer span {
-        
-    }
     body.home #drawernav {
         display:block;
         margin: 0px auto;
@@ -526,6 +510,7 @@ body.page #logo img {
     #footer-bottom {
         margin-top:10px;
         color:#fff;
+        text-shadow: 1px 1px 1px #000;
     }
 
     #footer-bottom span {
@@ -556,12 +541,47 @@ body.page #logo img {
         color:@white;
         width:19%;
         text-align: right;
+        text-shadow: 1px 1px 1px #000;
+    }
+
+    #footer-nav li a:hover {
+         text-decoration: underline;
+         color:@gold;
     }
     #footer-search {
         width:200px;
         float:right;
         margin-bottom:10px;
+
+        input {
+            background-color: @darkBlue;
+            color:@white;
+        }
     }
+
+    #social-footer {
+        float:right;
+    }
+
+    #social-footer a i {
+        color:@white;
+        font-size:25px;
+    }
+
+    #social-footer a i:hover {
+        color:@gold;
+
+    }
+
+
+    #copyright-footer {
+        clear: both;
+        float:right;
+    }
+    #copyright-footer span {
+
+    }
+   
 }
 
 @media (min-width: 1000px) {
