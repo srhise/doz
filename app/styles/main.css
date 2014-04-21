@@ -7354,6 +7354,23 @@ body.page #logo img {
   width: 80%;
 }
 @media (min-width: 300px) and (max-width: 720px) {
+  body.page #logo {
+    background: url(../images/logo-svg.svg);
+    -webkit-background-size: 150px 50px;
+    /* Safari 3.0 */
+    -moz-background-size: 150px 50px;
+    /* Gecko 1.9.2 (Firefox 3.6) */
+    -o-background-size: 150px 50px;
+    /* Opera 9.5 */
+    background-size: 150px 50px;
+    /* Gecko 2.0 (Firefox 4.0) and other CSS3-compliant browsers */
+    display: block;
+    width: 150px;
+    height: 51px;
+    background-repeat: no-repeat;
+    padding: 9px;
+    margin: 5px 2px;
+  }
   .shifter-active .shifter-navigation {
     display: none;
   }
@@ -7445,6 +7462,9 @@ body.page #logo img {
     display: block;
     width: 270px;
     margin: 0px auto;
+  }
+  body.home #footer {
+    background: none;
   }
   body.home #footer-below {
     position: fixed;
@@ -7550,6 +7570,18 @@ body.page #logo img {
   }
 }
 @media (min-width: 720px) {
+  body.page #logo {
+    background: url(../images/logo-svg.svg);
+    -webkit-background-size: 159px 85px;
+    -moz-background-size: 159px 85px;
+    -o-background-size: 159px 85px;
+    background-size: 159px 85px;
+    display: block;
+    width: 159px;
+    height: 85px;
+    background-repeat: no-repeat;
+    padding: 9px;
+  }
   #content {
     background-color: #fff;
     margin-top: 15px;
@@ -7572,6 +7604,17 @@ body.page #logo img {
     position: fixed;
     bottom: 50px;
     width: 100%;
+  }
+  #social-footer {
+    float: right;
+  }
+  #social-footer i {
+    color: #ffffff;
+    font-size: 25px;
+  }
+  #copyright-footer {
+    clear: both;
+    float: right;
   }
   body.home #drawernav {
     display: block;
@@ -7602,6 +7645,9 @@ body.page #logo img {
     text-align: center;
     font-weight: 700;
     font-style: normal;
+  }
+  body.home #footer {
+    background: none;
   }
   body.home #footer-below {
     text-align: center;
@@ -7717,10 +7763,71 @@ body.page #logo img {
   #sidebar .arrow {
     display: none;
   }
+  #footer {
+    padding: 10px 0px;
+    background-color: #0c3d5f;
+  }
+  #footer-top {
+    padding-bottom: 10px;
+    border-bottom: 2px solid #01304e;
+  }
+  #footer-bottom {
+    margin-top: 10px;
+    color: #fff;
+  }
+  #footer-bottom span {
+    display: block;
+  }
+  #footer-bottom span a {
+    color: #fff;
+  }
+  #footer-logo img {
+    width: 75%;
+  }
+  #footer-nav {
+    clear: both;
+    list-style-type: none;
+    display: block;
+    padding: 0;
+    margin: 10px 0px 0px 0px;
+  }
+  #footer-nav li {
+    display: block;
+  }
+  #footer-nav li a {
+    display: block;
+    float: left;
+    margin-right: 1%;
+    color: #ffffff;
+    width: 19%;
+    text-align: right;
+  }
+  #footer-search {
+    width: 200px;
+    float: right;
+    margin-bottom: 10px;
+  }
 }
 @media (min-width: 1000px) {
+  body.page #logo {
+    background: url(../images/logo-linear-svg.svg);
+    -webkit-background-size: 400px 70px;
+    /* Safari 3.0 */
+    -moz-background-size: 400px 70px;
+    /* Gecko 1.9.2 (Firefox 3.6) */
+    -o-background-size: 400px 70px;
+    /* Opera 9.5 */
+    background-size: 400px 70px;
+    /* Gecko 2.0 (Firefox 4.0) and other CSS3-compliant browsers */
+    display: block;
+    width: 535px;
+    height: 61px;
+    background-repeat: no-repeat;
+    margin: 5px 2px;
+  }
   body.home #footer {
     bottom: 10px;
+    background: none;
   }
   body.home #drawernav {
     display: block;
