@@ -1,7 +1,7 @@
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7 home"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8 home"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9 home"> <![endif]-->
 <!--[if gt IE 8]><!-->
 <html class="no-js home">
 <!--<![endif]-->
@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <script type="text/javascript" src="//use.typekit.net/ntt3ifq.js"></script>
@@ -30,6 +30,7 @@
 </head>
 
 <body class="home">
+    <div id="ieBackground"></div>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -44,7 +45,7 @@
     <div id="footer">
 
         <div class="container" id="mainnav">
-            <div class="row">
+            <div class="row hidden-sm hidden-md hidden-lg hidden-xl">
                 <div class="col-md-12">
                     <a id="navigation-link" href="#" class="btn btn-primary">Navigation <i class="fa fa-plus-circle"></i></a>
                 </div>
@@ -86,7 +87,6 @@
 
     <!-- build:js scripts/main.js -->
     <script src="bower_components/jquery/jquery.js"></script>
-    <script src="scripts/hello.js"></script>
     <!-- endbuild -->
 
     <!-- build:js scripts/vendor/bootstrap.js -->

@@ -4,6 +4,14 @@
 @import "../bower_components/font-awesome/less/font-awesome.less";
 @fa-font-path: "../fonts/font-awesome";
 
+html{
+ height:100%;
+ min-height:100%;
+ }
+body{
+ min-height:100%;
+ }
+
 // Custom Mixins
 
 .box-shadow(@shadow: 0 1px 3px rgba(0,0,0,.25)) {
@@ -56,10 +64,8 @@ body.page #logo img {
         width:80%;
 }
 
-#footer {
-        padding:10px 0px;
-        background-color:#0c3d5f;
-}
+
+
 
 @media (min-width: 300px) and (max-width:720px) {
 
@@ -121,11 +127,25 @@ body.page #logo img {
         border-top:1px solid @darkBlue;
         padding:10px 0px;
         text-align: center;
+        font-size:18px;
+    }
+    .shifter-active nav.shifter-navigation ul li.last a {
+        border-bottom:1px solid @darkBlue;
     }
     .shifter-active nav.shifter-navigation ul li a:hover {
         color:@white;
         background-color: @darkBlue;
         text-decoration: none;
+    }
+    .shifter-active div#slider-social {
+        width:125px;
+        margin:0px auto;
+    }
+
+    .shifter-active div#slider-social a{
+        color:@white;
+        font-size:35px;
+        text-align: center;
     }
 
     body.home #mainnav {
@@ -297,6 +317,11 @@ body.page #logo img {
         background:none;
     }
 
+    #footer {
+        padding:10px 0px;
+        background-color:#155677;
+    }
+
     #footer-logo img {
         width:100%;
     }
@@ -368,6 +393,11 @@ body.page #logo img {
 
 @media (min-width: 720px) {
 
+    #footer {
+        padding:10px 0px;
+        background-color:#155677;
+    }
+
     body.page #logo {
        background: url(../images/logo-svg.svg);
         -webkit-background-size: 159px 85px;
@@ -405,24 +435,22 @@ body.page #logo img {
     }
     
     body.home #footer {
+        background:none;
         position: fixed;
-        bottom:50px;
+        bottom:5px;
         width:100%;
+        padding:0px;
     }
 
     body.home #drawernav {
         display:block;
         margin: 0px auto;
         position:relative;
-        bottom: 25px;
+        bottom: 0px;
     }
 
-    body.home #drawernav {
-      display: none;
-    }
-
-    body.home #mainnav {
-        display:none;
+    body.home #mainnavrow {
+        display: block !important;
     }
     body.home #main-nav-container {
         width:530px;
@@ -441,9 +469,6 @@ body.page #logo img {
         }
     }
 
-    body.home #footer {
-        background: none;
-    }
     body.home #footer-below{
         text-align: center;
         color:#fff;
@@ -457,8 +482,13 @@ body.page #logo img {
         font-family:@font-family-serif;
         font-weight:normal;
         text-shadow: 5px 2px 7px #221f1f;
+        margin:7px 0px 0px 0px;
     }
 
+    body.home #copyright {
+        color:#fff !important;
+        display: block;
+    }
 
     div#top-nav {        
         a {
@@ -622,7 +652,7 @@ body.page #logo img {
         margin-bottom:10px;
 
         input {
-            background-color: @darkBlue;
+            background-color: @blue;
             color:@white;
         }
     }
@@ -656,19 +686,22 @@ body.page #logo img {
 
     body.page #logo {
         background: url(../images/logo-linear-svg.svg);
-        -webkit-background-size: 400px 70px;           /* Safari 3.0 */
-        -moz-background-size:    400px 70px;           /* Gecko 1.9.2 (Firefox 3.6) */
-        -o-background-size:      400px 70px;           /* Opera 9.5 */
-          background-size:       400px 70px;           /* Gecko 2.0 (Firefox 4.0) and other CSS3-compliant browsers */
+        -webkit-background-size: 477px 68px;           /* Safari 3.0 */
+        -moz-background-size:    477px 68px;           /* Gecko 1.9.2 (Firefox 3.6) */
+        -o-background-size:      477px 68px;           /* Opera 9.5 */
+          background-size:       477px 68px;           /* Gecko 2.0 (Firefox 4.0) and other CSS3-compliant browsers */
         display: block;
-        width: 535px;
-        height: 61px;
+        width: 477px;
+        height: 68px;
         background-repeat: no-repeat;
         margin: 5px 2px;
     }
     body.home #footer {
         bottom:10px;
         background: none;
+    }
+    body.home #footer-below h1 {
+        margin:20px 0px 10px 0px;
     }
 
     body.home #drawernav {
@@ -766,4 +799,14 @@ body.page #logo img {
     font-family:@font-family-serif;
     font-size:16px;
     font-style: italic;
+}
+
+html.no-svg body.page #logo {
+    background: url(../images/logo-linear-SVG.png);
+    display: block;
+    width: 535px;
+    height: 75px;
+    background-repeat: no-repeat;
+    padding: 9px;
+    margin: 5px 2px;
 }

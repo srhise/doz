@@ -1,7 +1,7 @@
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7 page"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8 page"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9 page"> <![endif]-->
 <!--[if gt IE 8]><!-->
 <html class="no-js page">
     <!--<![endif]-->
@@ -10,7 +10,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title></title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <script type="text/javascript" src="//use.typekit.net/ntt3ifq.js"></script>
@@ -23,13 +23,14 @@
         <link rel="stylesheet" href="styles/main.css">
         <!--[if IE]>
         <link rel="stylesheet" href="styles/ie.css">
-        <script type="text/javascript" src="app/bower_components/respond/dest/respond.min.js"></script>
         <![endif]-->
         <!-- build:js scripts/vendor/modernizr.js -->
         <script src="bower_components/modernizr/modernizr.js"></script>
+        <script type="text/javascript" src="bower_components/respond/dest/respond.min.js"></script>
         <!-- endbuild -->
     </head>
     <body class="page shifter">
+        <div id="ieBackground"></div>
         <div class="shifter-page">
             <div id="top-nav" class="container">
                 <div class="row">
@@ -277,7 +278,7 @@
             <div class="container">
                 <div class="row" id="footer-top">
                     <div class="col-md-6">
-                        <a id="footer-logo"  href="index.html"><img src="images/logo-white.svg" alt="Dauby O'Connor &amp; Zaleski"/></a>
+                        <a id="footer-logo"  href="index.html"><img id="logo-footer" src="images/logo-white.svg" alt="Dauby O'Connor &amp; Zaleski"/></a>
                     </div>
                     <div class="col-md-6">
                         <form>
@@ -289,7 +290,7 @@
                                 </div>
                         </div>
                         </form>
-                        <ul id="footer-nav" class="hidden-xs">
+                        <ul id="footer-nav" class="hidden-xs hidden-sm">
                             <li><a href="#">About Us</a>
                             </li>
                             <li><a href="#">Services</a>
@@ -314,12 +315,12 @@
                         <span>Fax: <a href="tel:5555555">848-5500</a></span>
                         <span><a href="mailto: info@doz.net">info@doz.net</a></span>
                     </div>
-                    <div class="col-md-2 hidden-xs">
+                    <div class="col-md-2 hidden-xs hidden-sm">
                         <span><a href="#">Client Login</a></span>
                         <span><a href="#">DOZ Brand</a></span>
                         <span><a href="#">Confidentiality Note</a></span>
                     </div>
-                    <div class="col-md-12">
+                    <div class="col-md-6 col-xs-12">
                         <div id="social-footer">
                             <a href="#"><i class="fa fa-facebook-square social"></i></a>
                             <a href="#"><i class="fa fa-twitter-square social"></i></a>
@@ -336,6 +337,9 @@
         </div>
     </div>
     <nav class="shifter-navigation">
+        <div>
+            <img align="center" src="images/slider-logo.svg"/>
+        </div>
         <ul>
             <li><a href="#">About Us</a>
             </li>
@@ -345,10 +349,16 @@
             </li>
             <li><a href="#">Careers</a>
             </li>
-            <li><a href="#">Community</a>
+            <li class="last"><a href="#">Community</a>
             </li>
         </ul>
+        <div id="slider-social">
+            <a href="#"><i class="fa fa-facebook-square social"></i></a> &nbsp;
+            <a href="#"><i class="fa fa-twitter-square social"></i></a> &nbsp;
+            <a href="#"><i class="fa fa-linkedin-square social"></i></a> &nbsp;
+        </div>
     </nav>
+
     <!--[if lt IE 7]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
