@@ -7351,7 +7351,7 @@ body.page #logo {
   padding: 12px 5px 10px 5px;
 }
 body.page #logo img {
-  width: 200px;
+  width: 80%;
 }
 @media (min-width: 300px) and (max-width: 720px) {
   .shifter-active .shifter-navigation {
