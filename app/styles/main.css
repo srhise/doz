@@ -7362,7 +7362,7 @@ body.page #logo img {
 }
 @media (min-width: 300px) and (max-width: 720px) {
   body.page #logo {
-    background: url(../images/logo-svg.svg);
+    background: url(../images/logo-SVG.svg);
     -webkit-background-size: 150px 50px;
     /* Safari 3.0 */
     -moz-background-size: 150px 50px;
