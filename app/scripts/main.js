@@ -8,7 +8,8 @@ $(document).ready(function() {
     if ($('#sticky').length > 0) {
         $("#sticky").sticky({
             topSpacing: 0,
-            className: 'stuck'
+            className: 'stuck',
+            minWidthToStick: 0
         });
     }
 
