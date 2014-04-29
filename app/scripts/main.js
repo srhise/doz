@@ -5,11 +5,12 @@ if (!Modernizr.svg) {
 
 $(document).ready(function() {
 
-
-    $("#sticky").sticky({
-        topSpacing: 0,
-        className: 'stuck'
-    });
+    if ($('#sticky')) {
+        $("#sticky").sticky({
+            topSpacing: 0,
+            className: 'stuck'
+        });
+    }
 
     $('.services-popover').popover({
         html: true,
@@ -25,7 +26,7 @@ $(document).ready(function() {
         $('.community-popover').popover('hide');
         $(this).popover('show');
 
-        $('.popover').mouseleave(function(e){
+        $('.popover').mouseleave(function(e) {
             $('*').popover('hide');
         });
     });
