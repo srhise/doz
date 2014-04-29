@@ -10,8 +10,15 @@ html{
  }
 body{
  min-height:100%;
- }
+}
 
+#sticky {
+    width:100%;
+    z-index:9999;
+}
+.stuck #header {
+    border-bottom:3px solid @gold;
+}
 // Custom Mixins
 
 .box-shadow(@shadow: 0 1px 3px rgba(0,0,0,.25)) {
@@ -525,7 +532,6 @@ body.page #logo img {
     div#page-navigation div.popover {
         width:500px;
         max-width:500px;
-        min-height:155px;
         background-color:#275574;
         opacity: 0.9;
         border:none;
@@ -547,7 +553,8 @@ body.page #logo img {
     .popover-content-left {
         width:195px;
         border-right:2px solid @darkBlue;
-        min-height:170px;
+        //min-height:170px;
+        padding-bottom:10px;
         float:left;
     }
 
@@ -582,7 +589,7 @@ body.page #logo img {
             }
             > a {
                 padding-left:5px;
-                font-size:16px;
+                font-size:14px;
                 display: block;
                 color:@gold;
             }

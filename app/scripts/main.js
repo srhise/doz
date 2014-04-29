@@ -5,6 +5,12 @@ if (!Modernizr.svg) {
 
 $(document).ready(function() {
 
+
+    $("#sticky").sticky({
+        topSpacing: 0,
+        className: 'stuck'
+    });
+
     $('.services-popover').popover({
         html: true,
         content: function() {
@@ -18,6 +24,10 @@ $(document).ready(function() {
         $('.careers-popover').popover('hide');
         $('.community-popover').popover('hide');
         $(this).popover('show');
+
+        $('.popover').mouseleave(function(e){
+            $('*').popover('hide');
+        });
     });
 
     $('.about-popover').popover({
@@ -33,6 +43,9 @@ $(document).ready(function() {
         $('.careers-popover').popover('hide');
         $('.community-popover').popover('hide');
         $(this).popover('show');
+        $('.popover').mouseleave(function(e) {
+            $('*').popover('hide');
+        });
     });
 
     $('.insights-popover').popover({
@@ -50,6 +63,9 @@ $(document).ready(function() {
         $(this).popover('show');
         $(this).next().css('left', '-228px');
         $(this).next().children('.arrow').css('left', '52%');
+        $('.popover').mouseleave(function(e) {
+            $('*').popover('hide');
+        });
     });
 
     $('.careers-popover').popover({
@@ -67,6 +83,10 @@ $(document).ready(function() {
         $(this).popover('show');
         $(this).next().css('left', '-308px');
         $(this).next().children('.arrow').css('left', '69%');
+
+        $('.popover').mouseleave(function(e) {
+            $('*').popover('hide');
+        });
     });
 
     $('.community-popover').popover({
@@ -86,6 +106,10 @@ $(document).ready(function() {
         $(this).next().css('left', '-386px');
         $(this).next().children('.arrow').css('left', '86%');
 
+        $('.popover').mouseleave(function(e) {
+            $('*').popover('hide');
+        });
+
     });
 
     $('#navigation-link').on('click', function() {
@@ -98,6 +122,10 @@ $(document).ready(function() {
                 $('#navigation-link i').addClass('fa-minus-circle');
             }
         });
+    });
+
+    $('.popover').mouseenter(function(e) {
+        console.log('test');
     });
 
     $(document).unbind('click').bind('click', function(e) {
