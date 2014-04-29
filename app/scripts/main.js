@@ -5,7 +5,7 @@ if (!Modernizr.svg) {
 
 $(document).ready(function() {
 
-    if ($('#sticky')) {
+    if ($('#sticky').length > 0) {
         $("#sticky").sticky({
             topSpacing: 0,
             className: 'stuck'
