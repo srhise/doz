@@ -13,6 +13,9 @@ $(document).ready(function() {
         });
     }
 
+    
+    $('.tabs').easyResponsiveTabs();
+    
     $('.services-popover').popover({
         html: true,
         content: function() {
