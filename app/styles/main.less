@@ -315,7 +315,6 @@ body.page #logo img {
     #content #sectionNavigation ul li a:hover {
         background-color:@darkBlue;
         font-size:16px;
-        padding:0px;
     }
 
     h1.page-title {
@@ -350,6 +349,10 @@ body.page #logo img {
        font-size:18px;
        line-height: 18px;
     }   
+
+    #footer-bottom { 
+        background-color:@blue;
+    }
 
     #footer-bottom span {
         display: block;
@@ -527,9 +530,15 @@ body.page #logo img {
     div#top-nav {        
         a {
             line-height: 37px;
-            margin-right:10px;
+            margin-right:0px;
             color:@white;
         }
+    }
+
+    span.bullet {
+        line-height: 37px;
+        color:@white;
+        margin:0px 5px;
     }
 
     div#header {
@@ -546,7 +555,7 @@ body.page #logo img {
         height: 40px;
         margin: 35px 20px 10px 10px;
         padding: 0px;
-        font-size: 16px;
+        font-size: 18px;
         font-weight: 700;  
         color:@blue;
     }
@@ -554,7 +563,7 @@ body.page #logo img {
         height: 34px;
         margin: 20px 20px 8px 10px;
         padding: 0px;
-        font-size: 16px;
+        font-size: 18px;
         font-weight: 700;
         color: #155677;
     }
@@ -647,17 +656,29 @@ body.page #logo img {
     }
 
     #footer-bottom {
-        margin-top:10px;
+        padding-top:10px;
+        background-color:@blue;
         color:#fff;
-        text-shadow: 1px 1px 1px #000;
+        font-size:13px;
     }
 
     #footer-bottom span {
-        display: block;
+        margin:0px 3px;
     }
-    #footer-bottom span a {
+
+    #footer-bottom span::after {
+        content: "\00a0 \00a0 \00a0 \00a0 | ";
+    }
+
+    #footer-bottom span a, #footer-bottom a {
         color:#fff;
     }
+
+    #footer-bottom a {
+       text-decoration: underline;
+       margin:0px 5px;
+    }
+
     #footer-logo img {
         width:75%;
     }
@@ -727,13 +748,13 @@ body.page #logo img {
 
     body.page #logo {
         background: url(../images/logo-linear-SVG.svg);
-        -webkit-background-size: 477px 68px;           /* Safari 3.0 */
-        -moz-background-size:    477px 68px;           /* Gecko 1.9.2 (Firefox 3.6) */
-        -o-background-size:      477px 68px;           /* Opera 9.5 */
-          background-size:       477px 68px;           /* Gecko 2.0 (Firefox 4.0) and other CSS3-compliant browsers */
+        -webkit-background-size: 421px 72px;           /* Safari 3.0 */
+        -moz-background-size:    421px 72px;           /* Gecko 1.9.2 (Firefox 3.6) */
+        -o-background-size:      421px 72px;           /* Opera 9.5 */
+          background-size:       421px 72px;           /* Gecko 2.0 (Firefox 4.0) and other CSS3-compliant browsers */
         display: block;
-        width: 477px;
-        height: 68px;
+        width: 421px;
+        height: 72px;
         background-repeat: no-repeat;
         margin: 5px 2px;
     }
@@ -788,7 +809,42 @@ body.page #logo img {
     }
 }
 
+
 /* Global Styles */
+#search {
+    width:150px;
+    input {
+        border-radius:0px;
+        padding:0px;
+        height:22px;
+        margin-top:8px;
+        margin-left:8px;
+        font-size: 12px;
+        text-indent: 6px;
+    }
+    button {
+        margin-top:8px;
+        padding:0px;
+        background-color:@blue;
+        color:#fff;
+        width:24px;
+        border-radius:0px;
+    }
+}
+
+.aligncenter {
+    text-align: center;
+}
+
+.white {
+    color:@white;
+}
+
+#copyright {
+    height:40px;
+    line-height: 40px;
+}
+
 #content {
     -moz-box-shadow:    0 1px 10px rgba(0,0,0,.25);
     -webkit-box-shadow: 0 1px 10px rgba(0,0,0,.25);
@@ -826,14 +882,20 @@ body.page #logo img {
             padding:0;
             li {
                 list-style-type: none;
+                margin-bottom:1px;
+                a {
+                    display: block;
+                    padding:2px 0px 2px 2px;
+                }
                 a:hover {
                     text-decoration: none;
                     background-color:@gray-lighter;
-                    display: block;
+                   
                 }
             }
-            li.active a{
-                color:@gold;
+            li.active a {
+                text-decoration: none;
+                background-color:@gray-lighter;
             }
         }
     }

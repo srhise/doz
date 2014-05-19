@@ -340,7 +340,7 @@ h6,
   font-family: "franklin-gothic-urw-cond", Helvetica, Arial, sans-serif;
   font-weight: 500;
   line-height: 1.1;
-  color: #155677;
+  color: #034670;
 }
 h1 small,
 h2 small,
@@ -7329,11 +7329,11 @@ body {
   z-index: 9999;
 }
 .stuck #header {
-  border-bottom: 3px solid #b0a76b;
+  border-bottom: 3px solid #b6ac69;
 }
 /*Colors */
 .gold {
-  color: #b0a76b;
+  color: #b6ac69;
 }
 html.home {
   background: url(../images/home-bkgd-1650x843-HighRes.jpg) no-repeat center center fixed;
@@ -7416,7 +7416,7 @@ body.page #logo img {
     width: 150px;
   }
   .shifter-active nav.shifter-navigation {
-    background-color: #155677;
+    background-color: #034670;
   }
   .shifter-active nav.shifter-navigation ul {
     list-style-type: none;
@@ -7460,7 +7460,7 @@ body.page #logo img {
     border-radius: 0px;
     background-color: #fff;
     border: none;
-    color: #155677;
+    color: #034670;
   }
   body.home #drawernav {
     width: 100%;
@@ -7538,7 +7538,7 @@ body.page #logo img {
     margin: 0px;
     text-align: center;
     width: 100%;
-    background-color: #155677;
+    background-color: #034670;
     color: #ffffff;
     height: 55px;
     line-height: 55px;
@@ -7584,13 +7584,12 @@ body.page #logo img {
     padding: 3px 0px;
   }
   #content #sectionNavigation ul li.active a {
-    color: #b0a76b;
+    color: #b6ac69;
     font-size: 16px;
   }
   #content #sectionNavigation ul li a:hover {
     background-color: #063b5f;
     font-size: 16px;
-    padding: 0px;
   }
   h1.page-title {
     margin-top: 0px;
@@ -7617,6 +7616,9 @@ body.page #logo img {
   #footer-search input {
     font-size: 18px;
     line-height: 18px;
+  }
+  #footer-bottom {
+    background-color: #034670;
   }
   #footer-bottom span {
     display: block;
@@ -7650,7 +7652,7 @@ body.page #logo img {
   }
   #footer-nav li a:hover {
     text-decoration: underline;
-    color: #b0a76b;
+    color: #b6ac69;
   }
   #social-footer {
     margin: 10px 0px 10px 0px;
@@ -7661,7 +7663,7 @@ body.page #logo img {
     font-size: 35px;
   }
   #social-footer a i:hover {
-    color: #b0a76b;
+    color: #b6ac69;
   }
 }
 @media (min-width: 720px) {
@@ -7771,8 +7773,13 @@ body.page #logo img {
   }
   div#top-nav a {
     line-height: 37px;
-    margin-right: 10px;
+    margin-right: 0px;
     color: #ffffff;
+  }
+  span.bullet {
+    line-height: 37px;
+    color: #ffffff;
+    margin: 0px 5px;
   }
   div#header {
     background-color: #fff;
@@ -7787,15 +7794,15 @@ body.page #logo img {
     height: 40px;
     margin: 35px 20px 10px 10px;
     padding: 0px;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
-    color: #155677;
+    color: #034670;
   }
   div.stuck div#page-navigation > ul > li > a {
     height: 34px;
     margin: 20px 20px 8px 10px;
     padding: 0px;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
     color: #155677;
   }
@@ -7864,7 +7871,7 @@ body.page #logo img {
     padding-left: 5px;
     font-size: 14px;
     display: block;
-    color: #b0a76b;
+    color: #b6ac69;
   }
   .popover-content-right > ul > li > a:hover {
     background-color: #063b5f;
@@ -7881,15 +7888,24 @@ body.page #logo img {
     border-bottom: 2px solid #01304e;
   }
   #footer-bottom {
-    margin-top: 10px;
+    padding-top: 10px;
+    background-color: #034670;
     color: #fff;
-    text-shadow: 1px 1px 1px #000;
+    font-size: 13px;
   }
   #footer-bottom span {
-    display: block;
+    margin: 0px 3px;
   }
-  #footer-bottom span a {
+  #footer-bottom span::after {
+    content: "\00a0 \00a0 \00a0 \00a0 | ";
+  }
+  #footer-bottom span a,
+  #footer-bottom a {
     color: #fff;
+  }
+  #footer-bottom a {
+    text-decoration: underline;
+    margin: 0px 5px;
   }
   #footer-logo img {
     width: 75%;
@@ -7915,7 +7931,7 @@ body.page #logo img {
   }
   #footer-nav li a:hover {
     text-decoration: underline;
-    color: #b0a76b;
+    color: #b6ac69;
   }
   #footer-search {
     width: 200px;
@@ -7923,7 +7939,7 @@ body.page #logo img {
     margin-bottom: 10px;
   }
   #footer-search input {
-    background-color: #155677;
+    background-color: #034670;
     color: #ffffff;
   }
   #social-footer {
@@ -7934,7 +7950,7 @@ body.page #logo img {
     font-size: 25px;
   }
   #social-footer a i:hover {
-    color: #b0a76b;
+    color: #b6ac69;
   }
   #copyright-footer {
     clear: both;
@@ -7944,17 +7960,17 @@ body.page #logo img {
 @media (min-width: 1000px) {
   body.page #logo {
     background: url(../images/logo-linear-SVG.svg);
-    -webkit-background-size: 477px 68px;
+    -webkit-background-size: 421px 72px;
     /* Safari 3.0 */
-    -moz-background-size: 477px 68px;
+    -moz-background-size: 421px 72px;
     /* Gecko 1.9.2 (Firefox 3.6) */
-    -o-background-size: 477px 68px;
+    -o-background-size: 421px 72px;
     /* Opera 9.5 */
-    background-size: 477px 68px;
+    background-size: 421px 72px;
     /* Gecko 2.0 (Firefox 4.0) and other CSS3-compliant browsers */
     display: block;
-    width: 477px;
-    height: 68px;
+    width: 421px;
+    height: 72px;
     background-repeat: no-repeat;
     margin: 5px 2px;
   }
@@ -8005,11 +8021,41 @@ body.page #logo img {
   }
 }
 /* Global Styles */
+#search {
+  width: 150px;
+}
+#search input {
+  border-radius: 0px;
+  padding: 0px;
+  height: 22px;
+  margin-top: 8px;
+  margin-left: 8px;
+  font-size: 12px;
+  text-indent: 6px;
+}
+#search button {
+  margin-top: 8px;
+  padding: 0px;
+  background-color: #034670;
+  color: #fff;
+  width: 24px;
+  border-radius: 0px;
+}
+.aligncenter {
+  text-align: center;
+}
+.white {
+  color: #ffffff;
+}
+#copyright {
+  height: 40px;
+  line-height: 40px;
+}
 #content {
   -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.25);
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.25);
-  border-top: 3px solid #b0a76b;
+  border-top: 3px solid #b6ac69;
 }
 #content p,
 #content span,
@@ -8019,12 +8065,12 @@ body.page #logo img {
 }
 #content .page-title {
   font-weight: 700;
-  color: #155677;
+  color: #034670;
   margin-bottom: 0px;
 }
 #content .page-subhead {
   font-family: "arno-pro", "Times New Roman", Times, serif;
-  color: #155677;
+  color: #034670;
   font-size: 24px;
   font-style: italic;
 }
@@ -8040,20 +8086,25 @@ body.page #logo img {
 }
 #content .widget ul li {
   list-style-type: none;
+  margin-bottom: 1px;
+}
+#content .widget ul li a {
+  display: block;
+  padding: 2px 0px 2px 2px;
 }
 #content .widget ul li a:hover {
   text-decoration: none;
   background-color: #eeeeee;
-  display: block;
 }
 #content .widget ul li.active a {
-  color: #b0a76b;
+  text-decoration: none;
+  background-color: #eeeeee;
 }
 #content table {
   border: 1px solid #eeeeee;
 }
 #content table thead {
-  background-color: #155677;
+  background-color: #034670;
   color: #ffffff;
 }
 .tooltip-inner {
