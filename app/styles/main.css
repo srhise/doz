@@ -8074,10 +8074,109 @@ body.page #logo img {
   font-size: 24px;
   font-style: italic;
 }
+#content .widget {
+  margin-top: 20px;
+  clear: both;
+}
 #content .widget h3.widget-title {
-  font-size: 14px;
-  text-decoration: underline;
+  font-size: 16px;
+  text-decoration: none;
   margin-bottom: 5px;
+  font-weight: bold;
+  width: 75%;
+  float: left;
+}
+#content .widget a.view-all {
+  display: block;
+  width: 25%;
+  margin-top: 30px;
+  float: left;
+  font-style: italic;
+  font-family: "arno-pro", "Times New Roman", Times, serif;
+}
+#content .widget hr {
+  margin: 0px;
+}
+#content .widget div.event-details {
+  width: 75%;
+  float: left;
+  padding: 0px 0px 0px 5px;
+}
+#content .widget div.event-details span.short-excerpt {
+  font-family: "arno-pro", "Times New Roman", Times, serif;
+  font-style: italic;
+}
+#content .widget span.event-date {
+  position: relative;
+  margin-left: 2%;
+  margin-right: 2%;
+  display: block;
+  width: 20%;
+  height: 57px;
+  float: left;
+  border: 1px solid #034670;
+  clear: left;
+  margin-bottom: 5px;
+  margin-top: 15px;
+  border-radius: 6px;
+}
+#content .widget span.marker {
+  display: block;
+  width: 52px;
+  height: 12px;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  background: url(../images/calendar-bg.png) no-repeat 5px center;
+}
+#content .widget div.spacer {
+  margin-bottom: 1px;
+}
+#content .widget li.tweet {
+  border: 1px solid #dcdddd !important;
+  border-radius: 4px;
+}
+#content .widget span.event-date h4 {
+  font-weight: normal;
+  color: #034670;
+  font-size: 31px;
+  padding: 2px 0px;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+#content .widget h4.feed-header {
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+#content .widget span.event-date h5 {
+  font-weight: normal;
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 0px;
+  margin: 0;
+  width: 100%;
+  background-color: #034670;
+  text-transform: uppercase;
+  text-align: center;
+  border: 1px solid #034670;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+#content .widget .ad-header {
+  background-color: #dfe1e3;
+  padding: 5px 5px 15px 15px;
+  background: url(../images/ad-marker.png) #eeeeee no-repeat top right;
+}
+#content .widget .ad-header h5 {
+  font-size: 18px;
+  padding-right: 20%;
+  margin-bottom: 0px;
+}
+#content .widget .ad-header span {
+  font-style: italic;
+  margin: 0px;
+  font-family: "arno-pro", "Times New Roman", Times, serif;
 }
 #content .widget ul {
   list-style-type: none;

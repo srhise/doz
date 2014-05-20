@@ -5,6 +5,11 @@ if (!Modernizr.svg) {
 
 $(document).ready(function() {
 
+    var hideTwitterAttempts = 0;
+
+    // somewhere in your code after html page load
+    hideTwitterBoxElements();
+
     if ($('#sticky').length > 0) {
         $("#sticky").sticky({
             topSpacing: 0,
@@ -13,9 +18,9 @@ $(document).ready(function() {
         });
     }
 
-    
+
     $('.tabs').easyResponsiveTabs();
-    
+
     $('.services-popover').popover({
         html: true,
         content: function() {
@@ -184,4 +189,32 @@ function handleSectionNavClicks() {
         }
         $('#sectionNavigation ul#sectionSubNav').fadeToggle(0);
     });
+}
+var hideTwitterAttempts = 0;
+function hideTwitterBoxElements() {
+    setTimeout(function() {
+        if ($('[id*=twitter]').length) {
+            $('[id*=twitter]').each(function() {
+                
+                var ibody = $(this).contents().find('body');
+
+                if (ibody.find('.timeline .stream .h-feed li.tweet').length) {
+                    ibody.find( '.summary' ).html('DOZ on Twitter');
+                    ibody.find( '.summary' ).css('color', '#034670');
+                    ibody.find( '.follow-button' ).css('margin-top', '4px');
+                    ibody.find( 'li.tweet' ).css('border', '1px solid #eeeeee');
+                    ibody.find( 'li.tweet' ).css('padding', '3px 7px');
+                    ibody.find( 'li.tweet' ).css('margin-bottom', '5px');
+                    ibody.find( 'li.tweet' ).css('border-radius', '6px');
+                    
+                } else {
+                    $(this).hide();
+                }
+            });
+        }
+        hideTwitterAttempts++;
+        if (hideTwitterAttempts < 3) {
+            hideTwitterBoxElements();
+        }
+    }, 500);
 }
