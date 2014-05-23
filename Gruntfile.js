@@ -273,7 +273,6 @@ module.exports = function (grunt) {
       'coffee',
       'less',
       'copy:server',
-      'connect:livereload',
       'watch'
     ]);
   });

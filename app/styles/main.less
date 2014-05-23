@@ -105,6 +105,27 @@ body.page #logo img {
     .shifter-handle {
         margin:15px 20px 0px 0px;
     }
+
+    #searchMobile {
+        width:100%;
+        input {
+            border-radius:0px;
+            padding:0px;
+            height:32px;
+            margin-top:8px;
+            margin-left:8px;
+            font-size: 12px;
+            text-indent: 6px;
+        }
+        button {
+            margin-top: 8px;
+            padding: 5px;
+            background-color: #034670;
+            color: #FFF;
+            width: 25px;
+            border-radius: 0px;
+        }
+    }
     #header {
         background-color:#fff;
         position: -webkit-sticky;
@@ -150,7 +171,7 @@ body.page #logo img {
         text-decoration: none;
     }
     .shifter-active div#slider-social {
-        width:125px;
+        width:75px;
         margin:0px auto;
     }
 
@@ -229,7 +250,9 @@ body.page #logo img {
     body.home #footer-below span a {
         color:#fff;
         font-size:18px;
+        text-shadow: 1px 1px 1px #000;
     }
+
     body.home #footer-below h1 {
         color:#fff;
         font-family:@font-family-serif;
@@ -238,6 +261,11 @@ body.page #logo img {
         margin:0px;
         text-shadow: 5px 2px 7px #221f1f;
     }
+
+    #footer-bottom-right span {
+        text-align: right;
+    }
+
     body.home #copyright {
         display: block;
         font-size:10px;
@@ -255,8 +283,16 @@ body.page #logo img {
         background-color:none;
     }
 
+    #sidebar {
+        margin-top:20px;
+        padding: 15px;
+        background-color: #FFF;
+        margin: 0px 5px 0px 5px;
+    }
+
     #content #sectionNavigation h3.widget-title {
         margin:0px;
+        font-family:arial, sans-serif;
         text-align: center;
         width:100%;
         background-color:@blue;
@@ -277,14 +313,14 @@ body.page #logo img {
 
     #content #sectionNavigation ul {
         position: absolute;
-        top:67px;
+        top:118px;
         left:10px;
         z-index: 10;
         padding:20px;
         display: block;
         padding-left:15px;
         padding-right:15px;
-        background-color: #275574;
+        background-color: @blue;
         opacity:1;
         display: none;
         border: none;
@@ -311,6 +347,7 @@ body.page #logo img {
     #content #sectionNavigation ul li.active a {
         color:@gold;
         font-size:16px;
+        background:none;
     }
     #content #sectionNavigation ul li a:hover {
         background-color:@darkBlue;
@@ -329,6 +366,10 @@ body.page #logo img {
 
     .shifter-active .shifter-page {
         background:none;
+    }
+
+    #copyright p.aligncenter {
+        visibility: hidden;
     }
 
     #footer {
@@ -352,14 +393,16 @@ body.page #logo img {
 
     #footer-bottom { 
         background-color:@blue;
+        padding-top:15px;
     }
 
     #footer-bottom span {
         display: block;
         color:#fff;
     }
-    #footer-bottom span a {
+    #footer-bottom span a, #footer-bottom a {
         color:#fff;
+        text-decoration: none;
     }
     #footer-logo img {
         width:90%;
@@ -407,6 +450,32 @@ body.page #logo img {
 
     }
 
+    #footer-company {
+        font-size:20px;
+        text-align: center;
+        margin-bottom:10px;
+    }
+
+    #footer-office {
+        position: absolute;
+        top: 29px;
+        right: 15px;
+    }
+    #footer-fax {
+        position: absolute;
+        top: 49px;
+        right: 15px;
+    }
+    #footer-email {
+        position: absolute;
+        top: 69px;
+        right: 15px;
+    }
+
+    #social-footer {
+        text-align: center;
+    }
+
 }
 
 @media (min-width: 720px) {
@@ -414,6 +483,11 @@ body.page #logo img {
     #footer {
         padding:10px 0px;
         background-color:#155677;
+    }
+
+    #copyright {
+        height:40px;
+        line-height: 40px;
     }
 
     body.page #logo {
@@ -513,6 +587,7 @@ body.page #logo img {
     body.home #footer-below span a {
         color:#fff;
         font-size:18px;
+        text-shadow: 1px 1px 1px #000; 
     }
     body.home #footer-below h1 {
         color:#fff;
@@ -532,6 +607,7 @@ body.page #logo img {
             line-height: 37px;
             margin-right:0px;
             color:@white;
+            text-shadow: 1px 1px 1px #000; 
         }
     }
 
@@ -539,6 +615,7 @@ body.page #logo img {
         line-height: 37px;
         color:@white;
         margin:0px 5px;
+        text-shadow: 1px 1px 1px #000; 
     }
 
     div#header {
@@ -667,7 +744,7 @@ body.page #logo img {
     }
 
     #footer-bottom span::after {
-        content: "\00a0 \00a0 \00a0 \00a0 | ";
+        content: "\00a0 \00a0 | ";
     }
 
     #footer-bottom span a, #footer-bottom a {
@@ -675,10 +752,12 @@ body.page #logo img {
     }
 
     #footer-bottom a {
-       text-decoration: underline;
        margin:0px 5px;
+       text-decoration: none;
     }
-
+    #footer-bottom a:hover {
+        text-shadow: 1px 1px 1px #000;
+    }
     #footer-logo img {
         width:75%;
     }
@@ -741,7 +820,10 @@ body.page #logo img {
     #copyright-footer span {
 
     }
-   
+    
+    #copyright p.aligncenter {
+        text-shadow: 1px 1px 1px #000; 
+    }   
 }
 
 @media (min-width: 1000px) {
@@ -790,6 +872,7 @@ body.page #logo img {
     body.home #copyright {
         display: block;
         margin-top:5px;
+        text-shadow: 1px 1px 1px #000; 
     }
 }
 
@@ -840,11 +923,6 @@ body.page #logo img {
     color:@white;
 }
 
-#copyright {
-    height:40px;
-    line-height: 40px;
-}
-
 #content {
     -moz-box-shadow:    0 1px 10px rgba(0,0,0,.25);
     -webkit-box-shadow: 0 1px 10px rgba(0,0,0,.25);
@@ -880,6 +958,7 @@ body.page #logo img {
             font-weight:bold;
             width:75%;
             float:left;
+            font-family:arial, sans-serif;
         }
 
         a.view-all {
@@ -970,9 +1049,8 @@ body.page #logo img {
         }
 
         .ad-header {
-            background-color:#dfe1e3;
             padding:5px 5px 15px 15px;
-            background:url(../images/ad-marker.png) #eeeeee no-repeat top right;
+            background:url(../images/ad-marker.png) #ececec no-repeat top right;
             h5 {
                 font-size:18px;
                 padding-right:20%;
@@ -986,6 +1064,9 @@ body.page #logo img {
             }
         }
 
+        .ad-image img {
+            width:100%;
+        }
         ul {
             list-style-type: none;
             margin:0;

@@ -18,8 +18,10 @@ $(document).ready(function() {
         });
     }
 
-
-    $('.tabs').easyResponsiveTabs();
+    if ($('.tabs').length > 0) {
+        $('.tabs').easyResponsiveTabs();
+    }
+   
 
     $('.services-popover').popover({
         html: true,
